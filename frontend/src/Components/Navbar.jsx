@@ -8,7 +8,7 @@ export default function Navbar() {
     <header className="nav-wrap">
       <div className="nav-inner">
         <div className="nav-left">
-          <div className="logo">RIVERFORD</div>
+          <div className="logo">Farmlet</div>
 
           <nav className="main-links" aria-label="Main navigation">
             <a href="#">Shop</a>
