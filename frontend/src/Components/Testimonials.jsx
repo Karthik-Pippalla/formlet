@@ -18,7 +18,6 @@ export default function Testimonials() {
         <h2 className="testimonials-title">Hear from our customers</h2>
 
         <div className="testimonials-grid">
-          {/* Testimonial 1 */}
           <article className="testimonial">
             <div className="quote-mark">“”</div>
 
@@ -32,7 +31,6 @@ export default function Testimonials() {
             <div className="testimonial-author">WILL, ALDRIDGE</div>
           </article>
 
-          {/* Testimonial 2 */}
           <article className="testimonial">
             <div className="quote-mark">“”</div>
 
