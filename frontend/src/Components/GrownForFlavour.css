@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+.grown-section {
+  position: relative;
+  background: #f4f1ec;
+  padding-bottom: 120px;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+}
+
+.grown-angled-top {
+  position: absolute;
+  top: 0;
+  left: -14%;
+  width: 140%;
+  height: 240px;
+  z-index: 1;
+  transform: rotate(-5deg);
+  transform-origin: top left;
+
+  background:
+    linear-gradient(90deg, #61B860 0%, #61B860 0%),
+
+    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.03) 0 2px, transparent 3px),
+    radial-gradient(circle at 40% 70%, rgba(255,255,255,0.02) 0 1.5px, transparent 2px),
+
+    radial-gradient(circle at 70% 30%, rgba(0,0,0,0.02) 0 1px, transparent 2px),
+    radial-gradient(circle at 90% 80%, rgba(0,0,0,0.018) 0 1px, transparent 2px);
+  background-size: cover, 60px 60px, 48px 48px, 36px 36px, 24px 24px;
+  background-blend-mode: normal, overlay, overlay, overlay, overlay;
+  box-shadow: none;
+}
+
+.grown-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 150px; 
+  text-align: center;
+}
+
+.grown-title {
+    margin-top: 120px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 46px;
+  font-weight: 400;
+  color: #3a2a19;
+  margin-bottom: 60px;
+}
+
+.grown-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center;
+  align-items: start;
+  padding: 0 20px;
+}
+
+.grown-image-wrap {
+  width: 320px;
+  height: 220px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin: 0 auto;
+}
+.grown-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.grown-card-text {
+  margin-top: 22px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3a2a19;
+  max-width: 320px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1000px) {
+  .grown-angled-top {
+    height: 160px;
+    transform: rotate(-5deg);
+    left: -18%;
+    width: 160%;
+  }
+  .grown-inner { padding-top: 110px; }
+  .grown-grid { grid-template-columns: 1fr; gap: 40px; }
+  .grown-image-wrap { width: 95%; height: 260px; }
+  .grown-card-text { max-width: 90%; text-align: center; }
+}
+
+@media (max-width: 420px) {
+  .grown-title { font-size: 32px; margin-bottom: 30px; }
+  .grown-angled-top { height: 120px; transform: rotate(-6deg); }
+  .grown-inner { padding-top: 96px; }
+}

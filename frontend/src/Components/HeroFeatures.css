@@ -29,7 +29,7 @@
 }
 
 .feature-box p {
-  color: black;      /* ← FIX HERE */
+  color: black;     
   font-family: Georgia, serif;
   font-size: 22px;
   line-height: 1.2;

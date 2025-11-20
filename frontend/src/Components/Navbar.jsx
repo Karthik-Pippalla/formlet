@@ -13,7 +13,6 @@ export default function Navbar() {
           <nav className="main-links" aria-label="Main navigation">
             <a href="#">Shop</a>
             <a href="#">About Riverford</a>
-            {/* <a href="#">Recipes</a> */}
           </nav>
         </div>
 

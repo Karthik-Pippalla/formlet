@@ -36,7 +36,6 @@ export default function StepsSection() {
           </p>
         </div>
 
-        {/* STEP 3 */}
         <div className="step-box">
           <img className="step-img" src="/icons/step3.png" alt="Step 3" />
 
