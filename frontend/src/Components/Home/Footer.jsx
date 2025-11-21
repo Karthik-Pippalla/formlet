@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import appstore from "../../Images/AppStore.png";
 import playstore from "../../Images/PlayStore.png";
-
+//starting of function
 export default function Footer() {
   return (
     <footer className="footer">
