@@ -32,8 +32,8 @@
 }
 
 .testimonials-title {
-  font-family: '', cursive;
-  font-size: 46px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
   font-weight: 700;
   letter-spacing: 1px;
   margin: 0 0 45px 0;
@@ -58,8 +58,8 @@
 }
 
 .testimonial-text {
-  font-family: 'arial',serif ;
-  font-size: 22px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
   line-height: 1.6;
   margin: 0 0 25px 0;
 }
@@ -67,7 +67,7 @@
 .highligth,
 .highligh {
   background-color: #f1e9d7;
-  color: #222;
+  color: #2e2400;
   padding: 4px 9px;
   border-radius: 3px;
   font-weight: 700;

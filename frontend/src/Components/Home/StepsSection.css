@@ -35,10 +35,12 @@
 
 .step-description {
   margin-top: 24px;
-  font-size: 18px;
-  color: #3a2a19;
-  line-height: 1.5;
-  font-family: Arial ,sans-serif;
+  font-size: 16px;
+  color: #2e2400;
+  line-height: 1.8;
+  font-family: "Work Sans",sans-serif;
+  letter-spacing: 1.2px;
+
 }
 
 
