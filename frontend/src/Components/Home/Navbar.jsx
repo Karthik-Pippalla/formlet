@@ -2,17 +2,23 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import AccountLinks from "./AccountLinks";
 import "./Navbar.css";
+import logo from "../../Images/Logo 1.png";
+import farmlet from "../../Images/Farmletlogo.png";
+
 
 export default function Navbar() {
   return (
     <header className="nav-wrap">
       <div className="nav-inner">
         <div className="nav-left">
-          <div className="logo">Farmlet</div>
+         <div className="logo-img"><img src={logo} alt="logo" /></div>
+         {/* <img src={logo} alt="logo" /> */}
+
+          {/* <div className="logo">Farmlet</div> */}
 
           <nav className="main-links" aria-label="Main navigation">
             <a href="#">Shop</a>
-            <a href="#">About myFarmlet</a>
+            <a href="#">About Farmlet</a>
           </nav>
         </div>
 
@@ -23,6 +29,8 @@ export default function Navbar() {
       </div>
 
       <div className="nav-submenu">
+        <img src={farmlet} alt="Farmlet Logo" />
+
         <div className="submenu-inner">
           {/* <a href="#">Seasonal boxes</a>
           <a href="#">Christmas</a>

@@ -4,11 +4,17 @@ import "./AccountLinks.css";
 export default function AccountLinks() {
   return (
     <div className="acct">
-      <div className="delivery">📅 Your delivery schedule</div>
+      <div className="delivery">  
+        <span className="line1">Your delivery</span><br />
+        <span className="line2">schedule</span>
+        </div>
+         <i className="fa-solid fa-calendar"></i> 
       <a className="signin" href="#">
-        Sign in or create account
+        Sign in or<br /> 
+         <span className="create">create account</span>
       </a>
-      <div className="avatar">👤</div>
+      {/* <div className="avatar">👤</div> */}
+     <i className="fa-solid fa-circle-user"></i>
     </div>
   );
 }

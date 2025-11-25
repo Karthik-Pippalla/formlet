@@ -2,16 +2,26 @@
   background: #fff;
   border-bottom: 1px solid #eee;
   font-family: Arial, sans-serif;
+  
+    
 }
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 4px 14px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  height: 80px;
 }
 .nav-left { display:flex; gap:28px; align-items:center; }
+
+.logo-img img {
+  
+  width:160px;
+  height: auto;
+}
+
 .logo {
   font-weight:700;
   font-size:22px;
@@ -21,11 +31,18 @@
   margin-right:18px;
   color:#333;
   text-decoration:none;
-  font-size:15px;
+  font-size:18px;
+  font-family: "work sans" sans-serif;
 }
 .nav-right { display:flex; gap:16px; align-items:center; }
 
-.nav-submenu { border-top:1px solid #f3f0ee; background: #fff; }
+.nav-submenu { border-top:1px solid #f3f0ee; background: #fff;  height: 60px;}
+.nav-submenu img {
+  width: 160px;           
+  height:auto;
+  margin-left: 70px;      
+}
+
 .submenu-inner {
   max-width:1200px; margin:0 auto; padding:10px 20px; display:flex; gap:22px; overflow:auto;
 }
