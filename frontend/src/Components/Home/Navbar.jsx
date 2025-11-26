@@ -70,14 +70,14 @@ Account: ["FAQs", "Help and contact", "Sign in or create account"],
             className={activeTab === "About" ? "active" : ""}
             onMouseEnter={() => handleHover("About")}
           >
-            About Formlet 
+            About Farmlet 
           </li>
       </ul>
 
         <div className="nav-right">
   
 <div className="search-box">
-  <input type="text" placeholder="Search Formlet" />
+  <input type="text" placeholder="Search Farmlet" />
   {/* <FiSearch size={20} /> */}
   <img src={searchIcon} alt="Search" style={{ width: 23, height: 23 }} />
 
