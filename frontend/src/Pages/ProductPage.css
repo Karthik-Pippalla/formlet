@@ -1,0 +1,139 @@
+.product-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f5f0;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  background: #204b29;
+  color: white;
+  padding: 12px 20px;
+  font-size: 18px;
+}
+
+.menu-icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.location {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* MAIN CONTENT */
+.content-area {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+/* LEFT SIDEBAR */
+.left-sidebar {
+  width: 230px;
+  background: white;
+  padding-top: 15px;
+  overflow-y: scroll;
+  height: 100%;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar-item {
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background: #edf5ee;
+}
+
+.sidebar-item.active {
+  background: #dcefe0;
+  font-weight: bold;
+}
+
+/* PRODUCTS GRID */
+.products-container {
+  flex: 1;
+  padding: 20px 30px;
+  overflow-y: scroll;
+}
+
+.page-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product-location {
+  background: #444;
+  color: white;
+  padding: 5px 10px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.product-name {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.weight-input {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.order-btn {
+  width: 100%;
+  background: #1d4228;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.bottom-login-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #1d4228;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: bold;
+}

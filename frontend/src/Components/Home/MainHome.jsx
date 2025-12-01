@@ -13,6 +13,7 @@ function MainHome() {
   return (
     <div>
         <Navbar />
+    
       <Hero />
       <HeroFeatures/>
       <StepsSection />
@@ -20,7 +21,7 @@ function MainHome() {
       <GrownForFlavour />
       <SliderWithHero/>
       <FaqSection/>
-
+       
       <Footer />
     </div>
   )

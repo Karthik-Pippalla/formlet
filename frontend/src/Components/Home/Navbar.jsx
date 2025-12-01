@@ -1,13 +1,12 @@
 import React, { useState, useRef } from "react";
 import "./Navbar.css";
 import SignInModal from "./SignInModal"; 
-// import { FaUser } from "react-icons/fa";
-// import { FiSearch } from "react-icons/fi";
-// import { BsCalendarEvent } from "react-icons/bs";
-import logo from "../../Images/Logo 1.png";
+
+import logo from "../../Images/Logo with typo.png";
 import searchIcon from '../../Images/Search icon.png';
 import CalendarIcon from "../../Images/Calendar icon.png";
 import accountIcon from "../../Images/Account icon.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [activeTab, setActiveTab] = useState("Shop");
@@ -23,7 +22,7 @@ export default function Navbar() {
     Shop: [
       "Fresh Fruit & Vegetables boxes",
       "What's new",
-      "Leafy & others ",
+      "Leafy & others",
       "Essentials",
       "Daily & eggs",
     ],
@@ -66,7 +65,6 @@ Account: ["FAQs", "Help and contact", "Sign in or create account"],
     "Leafy & others" :[
       "Leafy & Seasonings",
       "Other vegetables",
-      
     ],
  
     "Essentials":[
@@ -90,7 +88,7 @@ Account: ["FAQs", "Help and contact", "Sign in or create account"],
   const mobileDropdownContent = {
   Shop: [
     {
-      title: "Seasonal boxes",
+      title: "Fresh Fruit & Vegetables boxes",
       desc: "Our range of organic fruit, veg & meat boxes"
     },
     {
@@ -98,19 +96,15 @@ Account: ["FAQs", "Help and contact", "Sign in or create account"],
       desc: "Fresh in this week from our fields & friends"
     },
     {
-      title: "Recipe boxes & kits",
+      title: "Leafy & others",
       desc: "All you need for inspiring seasonal meals"
-    },
-    {
-      title: "Fruit, veg & salad",
-      desc: "Choose from the best organic produce"
     },
     {
       title: "Essentials",
       desc: "Dairy, eggs, bakery, store cupboard & more"
     },
     {
-      title: "Meat",
+      title: "Daily & eggs",
       desc: "The highest welfare organic British meat"
     }
   ],
@@ -121,6 +115,12 @@ Account: ["FAQs", "Help and contact", "Sign in or create account"],
     { title: "Careers", desc: "Learn more about careers at Farmlet" },
     { title: "Wicked Leeks magazine", desc: "Opinion pieces, ethical lifestyle & more" }
   ]
+};
+
+const navigate = useNavigate();
+
+const handleDropdownClick = (category) => {
+  navigate(`/products/${category.replace(/\s+/g, "-").toLowerCase()}`);
 };
 
 
@@ -169,7 +169,6 @@ const handleMobileClick = (tab) => {
   return (
     <>
       {/* Top Navbar */}
-      {/* <nav className="main-navbar" onMouseLeave={() => setActiveTab("Shop")}> */}
       <nav className="main-navbar" >
         
 
@@ -259,9 +258,14 @@ const handleMobileClick = (tab) => {
     
 
 {/* SUB MENU */}
+<div
+  className="submenu-container"
+ 
+  onMouseLeave={() => setActiveSubmenu(null)}
+>
       <div
         className="submenu"
-        onMouseLeave={() => setActiveSubmenu(null)}
+      
       >
         {submenus[activeTab]?.map((item, i) => (
           <span
@@ -279,12 +283,16 @@ const handleMobileClick = (tab) => {
    
       {dropdownData[activeSubmenu] && (
   <div className="dropdown-menu mobile-dropdown"style={{ left: dropdownPos.left }}
-          onMouseLeave={() => setActiveSubmenu(null)}>
+          >
     {dropdownData[activeSubmenu].map((d, i) => (
-      <div key={i} className="dropdown-item">{d}</div>
+      <div key={i} className="dropdown-item"
+      onClick={() => handleDropdownClick(d)}
+      >
+        {d}</div>
     ))}
   </div>
-)}
+)}</div>
+
 {activeSubmenu && window.innerWidth <= 768 && (
   <div className="mobile-dropdown-overlay">
     <div className="mobile-full-dropdown">
