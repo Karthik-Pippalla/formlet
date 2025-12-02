@@ -11,7 +11,16 @@ import veg1 from "../Images/veg1.png";
 import veg2 from "../Images/veg2.png";
 import leafy1 from "../Images/leafy1.png";
 import leafy2 from "../Images/leafy2.jpg";
-
+import apple from "../Images/apple.png";
+import carrot from "../Images/carrot.png";
+import leaf from "../Images/leaf.png";
+import tomato from "../Images/tomato.png";
+import dal from "../Images/dal.png";
+import orange from "../Images/orange.jpg";
+import dairy from "../Images/dairy.png";
+import snacksncoffee from "../Images/snacksncoffee.png";
+import grains from "../Images/grains.png";
+import dehydrated from "../Images/dehydrated.png";
 export default function ProductPage() {
   const { category } = useParams();
   const [selectedCategory, setSelectedCategory] = useState("Fresh Fruits");
@@ -109,7 +118,7 @@ export default function ProductPage() {
       }
     ],
 
-    "Exotics": [
+    "dairy": [
       {
         name: "Cherry Tomato",
         weight: "200 Gms",
@@ -119,9 +128,9 @@ export default function ProductPage() {
       }
     ],
 
-    "MisFits": [
+    "snacksncoffee": [
       {
-        name: "Misfit Carrot",
+        name: "Misfit coffee",
         weight: "500 Gms",
         price: "₹40.00",
         location: "From Ooty",
@@ -131,6 +140,18 @@ export default function ProductPage() {
   };
 
   const categories = Object.keys(allProducts);
+  const sidebarCategories = [
+  { img: apple, label: "Fresh Fruits" },
+  { img: carrot, label: "Fresh Vegetables" },
+  { img: leaf, label: "Leafy and Seasonings" },
+  { img: tomato, label: "Exotics" },
+  { img: orange, label: "MisFits" },
+  { img: dal, label: "Dals & Rice" },
+  { img: dehydrated, label: "Dehydrated" },
+  { img: grains, label: "Essentials" },
+  { img: dairy, label: "Daily & eggs" },
+  { img: snacksncoffee, label: "Snacks & Coffee" },
+];
 
   return (
     <div className="product-page">
@@ -143,35 +164,50 @@ export default function ProductPage() {
         </div>
       </div>
 
+
+
+      {/* MAIN CONTENT */}
       <div className="content-area">
-
-        {/* LEFT SIDEBAR WITH SCROLL */}
-        <div className="left-sidebar">
-          {categories.map((cat, index) => (
+        {/* LEFT SIDEBAR */}
+        <div className="sidebar-container">
+          {sidebarCategories.map((item) => (
             <div
-              key={index}
-              className={`sidebar-item ${selectedCategory === cat ? "active" : ""}`}
-              onClick={() => setSelectedCategory(cat)}
-            >
-              {cat}
-            </div>
+  key={item.label}
+  className={
+    "sidebar-item" +
+    (item.label === selectedCategory ? " active" : "")
+  }
+  onClick={() => setSelectedCategory(item.label)}
+>
+  <div className="icon-box">
+    <img src={item.img} alt={item.label} className="sidebar-icon" />
+  </div>
+  <span className="sidebar-text">{item.label}</span>
+</div>
           ))}
-        </div>
-
+        </div>          
         {/* RIGHT PRODUCTS GRID */}
         <div className="products-container">
           <h2 className="page-title">{selectedCategory}</h2>
 
           <div className="products">
-            {allProducts[selectedCategory].map((prod, index) => (
+            {allProducts[selectedCategory]?.map((prod, index) => (
               <div className="product-card" key={index}>
-                <img src={prod.image} className="product-image" alt={prod.name} />
+                <img
+                  src={prod.image}
+                  className="product-image"
+                  alt={prod.name}
+                />
 
                 <div className="product-location">{prod.location}</div>
 
                 <div className="product-name">{prod.name}</div>
 
-                <input className="weight-input" value={prod.weight} readOnly />
+                <input
+                  className="weight-input"
+                  value={prod.weight}
+                  readOnly
+                />
 
                 <div className="product-price">{prod.price}</div>
 
@@ -182,7 +218,8 @@ export default function ProductPage() {
         </div>
       </div>
 
+      {/* BOTTOM BAR */}
       <div className="bottom-login-bar">Login To Order</div>
     </div>
   );
-}
+} 
