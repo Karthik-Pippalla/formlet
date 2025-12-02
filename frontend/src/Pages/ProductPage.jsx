@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import "./ProductPage.css";
 import { HiMenu } from "react-icons/hi";
 import { FaChevronDown } from "react-icons/fa";
+// import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../Components/Home/Navbar";
 
 // IMAGES
 import fruit1 from "../Images/fruit1.png";
@@ -155,14 +157,15 @@ export default function ProductPage() {
 
   return (
     <div className="product-page">
+    <Navbar />
 
       {/* HEADER BAR */}
-      <div className="top-bar">
+      {/* <div className="top-bar">
         <HiMenu size={26} className="menu-icon" />
         <div className="location">
           Bengaluru <FaChevronDown size={14} />
         </div>
-      </div>
+      </div> */}
 
 
 
