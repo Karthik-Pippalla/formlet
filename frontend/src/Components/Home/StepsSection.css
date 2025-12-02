@@ -46,9 +46,9 @@
 
 
 .Header{
-    margin-top: -90px;
+    /* margin-top: -90px; */
     margin-bottom: 60px;
-    font-size: 30px;
+    font-size: 20px;
 }
 @media (max-width: 900px) {
   .steps-container {
