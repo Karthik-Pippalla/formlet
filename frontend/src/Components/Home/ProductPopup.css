@@ -13,17 +13,7 @@
   z-index: 9999;
 }
 
-/* MAIN POPUP BOX */
-/* .popup-box {
-  width: 95%;
-  height: 85%;
-  background: #fff;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-} */
+
  .popup-box {
   width: 95%;
   height: 92%;        /* Increased height */
@@ -55,7 +45,7 @@
 /* LEFT SIDE MENU */
 .popup-sidebar {
   width: 260px;
-  background: #f6f6f6;
+  background: #f4ebdc;
   padding-top: 20px;
   border-right: 1px solid #ddd;
   overflow-y: auto;
@@ -78,6 +68,7 @@
   flex: 1;
   padding: 30px;
   overflow-y: auto;
+  background-color: #f0e6d7;
 }
 
 .popup-title {
