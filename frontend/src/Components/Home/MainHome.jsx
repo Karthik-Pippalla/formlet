@@ -8,10 +8,12 @@ import Testimonials from "./Testimonials";
 import GrownForFlavour from "./GrownForFlavour";
 import SliderWithHero from "./SliderWithHero";
 import FaqSection from "./FaqSection";
+import FarmletPopup from "./FarmletPopup";
 
 function MainHome() {
   return (
     <div>
+        <FarmletPopup />
         <Navbar />
     
       <Hero />

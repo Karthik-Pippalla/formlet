@@ -28,7 +28,7 @@ export default function ProductPopup({
   if (!open) return null;
 
   return (
-    <div className="popup-overlay">
+    <div className="popup-overlay1">
       <div className="popup-box">
 
         <FaTimes className="popup-close" onClick={onClose} />
