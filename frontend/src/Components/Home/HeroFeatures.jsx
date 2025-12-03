@@ -2,7 +2,7 @@ import React from "react";
 import "./HeroFeatures.css";
 
 import farmers from "../../Images/farmers.png";
-import organic from "../../Images/organic.jpeg";
+import organic from "../../Images/Organic.png";
 import chemicals from "../../Images/chemicals.png";
 
 export default function HeroFeatures() {

@@ -14,6 +14,10 @@ import ProductPopup from "./ProductPopup";
 // IMAGES
 import fruit1 from "../../Images/fruit1.png";
 import fruit2 from "../../Images/fruit2.jpg";
+import fruit3 from "../../Images/fruit3.jpg";
+import fruit4 from "../../Images/fruit4.jpg";
+import fruit5 from "../../Images/fruit5.png";
+import fruit6 from "../../Images/fruit6.jpg";
 import veg1 from "../../Images/veg1.png";
 import veg2 from "../../Images/veg2.png";
 import leafy1 from "../../Images/leafy1.png";
@@ -144,9 +148,10 @@ const allProducts = {
   "Fresh Fruits": [
     { name: "Sweet Lime", weight: "1000 Gms", price: "₹89.00", location: "From Vandavasi, Tamilnadu", image: fruit1 },
     { name: "Nagpur Orange (500–600g)", weight: "500 Gms", price: "₹109.00", location: "From Nagpur, Maharashtra", image: fruit2 },
-    { name: "Sapota / Chiku", weight: "500 Gms", price: "₹79.00", location: "From Mysuru, Karnataka", image: fruit2 },
-     { name: "Nagpur Orange (500–600g)", weight: "500 Gms", price: "₹109.00", location: "From Nagpur, Maharashtra", image: fruit2 },
-    { name: "Sapota / Chiku", weight: "500 Gms", price: "₹79.00", location: "From Mysuru, Karnataka", image: fruit2 }
+    { name: "Red Lady Papaya - Medium (600g - 800g) (Seedless)", weight: "700 Gms", price: "₹89.00", location: "From Kadapa, Andhra Pradesh", image: fruit4 },
+    //  { name: "Watermelon Kiran", weight: "2000 Gms", price: "₹189.00", location: "From Denkanikottai, Tamilnadu", image: fruit5 },
+    { name: "Sapota / Chiku", weight: "500 Gms", price: "₹79.00", location: "From Mysuru, Karnataka", image: fruit3 },
+    { name : "Banana Elakki", weight: "1000 Gms", price: "₹129.00", location: "From Denkanikottai, Tamilnadu", image: fruit6}
   ],
 
   "Fresh Vegetables": [
@@ -181,6 +186,32 @@ const allProducts = {
   
  // ]
   
+};
+
+const categoryParentMap = {
+  // Fresh Fruits & Vegetables
+  "Fresh Fruits": "Fresh Fruits",
+  "Fresh Vegetables": "Fresh Vegetables",
+
+  // Leafy group
+  "Leafy & Seasonings": "Leafy & others",
+  "Other vegetables": "Leafy & others",
+
+  // Essentials group
+  "Dals & Rice": "Essentials",
+  "Ghees & Oils": "Essentials",
+  "Dehydrated": "Essentials",
+  "Masalas and Dry Fruits": "Essentials",
+  "Snacks and coffee": "Essentials",
+  "Natural sweeteners": "Essentials",
+  "Ready to cook": "Essentials",
+
+  // Daily & eggs group
+  "Mlik": "Daily & eggs",
+  "Eggs": "Daily & eggs",
+  "Yogurts": "Daily & eggs",
+  "Cheese": "Daily & eggs",
+  "Butter & cream": "Daily & eggs",
 };
 
 
@@ -366,7 +397,8 @@ const categories = Object.keys(allProducts);
           >
     {dropdownData[activeSubmenu].map((d, i) => (
       <div key={i} className="dropdown-item"
-   onClick={() => openProductPopup(d)}
+  //  onClick={() => openProductPopup(d)}
+onClick={() => openProductPopup(categoryParentMap[d] || d)}
 
 
 

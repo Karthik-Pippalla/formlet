@@ -1,18 +1,31 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ProductPage.css";
-import { HiMenu } from "react-icons/hi";
-import { FaChevronDown } from "react-icons/fa";
+// import { HiMenu } from "react-icons/hi";
+// import { FaChevronDown } from "react-icons/fa";
 // import Navbar from "../components/Navbar/Navbar";
 import Navbar from "../Components/Home/Navbar";
 
 // IMAGES
 import fruit1 from "../Images/fruit1.png";
 import fruit2 from "../Images/fruit2.jpg";
+import fruit3 from "../Images/fruit3.jpg";
+import fruit4 from "../Images/fruit4.jpg";
+import fruit5 from "../Images/fruit5.png";
+import fruit6 from "../Images/fruit6.jpg";
 import veg1 from "../Images/veg1.png";
 import veg2 from "../Images/veg2.png";
+import veg3 from "../Images/veg3.png";
+import veg4 from "../Images/veg4.png";
+import veg5 from "../Images/veg5.jpg";
+import veg6 from "../Images/veg6.png";
+import veg7 from "../Images/veg7.png";
+import veg8 from "../Images/veg8.jpg";
 import leafy1 from "../Images/leafy1.png";
 import leafy2 from "../Images/leafy2.jpg";
+import leafy3 from "../Images/leafy3.jpg";
+import leafy4 from "../Images/leafy4.png";
+import leafy5 from "../Images/leafy5.jpg"
 import apple from "../Images/apple.png";
 import carrot from "../Images/carrot.png";
 import leaf from "../Images/leaf.png";
@@ -39,20 +52,34 @@ export default function ProductPage() {
         location: "From Vandavasi, Tamilnadu",
         image: fruit1,
       },
-      {
-        name: "Nagpur Orange (500–600g)",
-        weight: "500 Gms",
-        price: "₹109.00",
-        location: "From Nagpur, Maharashtra",
-        image: fruit2,
-      },
+  
       {
         name: "Sapota / Chiku",
         weight: "500 Gms",
         price: "₹79.00",
         location: "From Mysuru, Karnataka",
-        image: fruit2,
-      }
+        image: fruit3,
+      },
+          { 
+            name: "Nagpur Orange (500–600g)", 
+            weight: "500 Gms", 
+            price: "₹89.00", 
+            location: "From Nagpur, Maharashtra", 
+            image: fruit2 ,
+          },
+           { 
+            name: "Nagpur Orange (1000–1200g)", 
+            weight: "500 Gms", 
+            price: "₹109.00", 
+            location: "From Nagpur, Maharashtra", 
+            image: fruit2 ,
+          },
+         { 
+            name: "Red Lady Papaya - Medium (1000g - 1200g) (Seedless)", weight: "1000 Gms", price: "₹109.00", location: "From Kadapa, Andhra Pradesh", image: fruit4 ,},
+          { 
+            name: "Red Lady Papaya - Medium (600g - 800g) (Seedless)", weight: "700 Gms", price: "₹89.00", location: "From Kadapa, Andhra Pradesh", image: fruit4 ,},
+           { name: "Watermelon Kiran", weight: "2000 Gms", price: "₹189.00", location: "From Denkanikottai, Tamilnadu", image: fruit5, },
+          { name : "Banana Elakki", weight: "1000 Gms", price: "₹129.00", location: "From Denkanikottai, Tamilnadu", image: fruit6,},
     ],
 
     "Fresh Vegetables": [
@@ -75,25 +102,48 @@ export default function ProductPage() {
         weight: "600 Gms",
         price: "₹65.00",
         location: "From Vandavasi",
-        image: veg1,
+        image: veg3,
       },
-        {
-        name: "Knol Khol Green",
+     {
+        name: "Chow Chow",
         weight: "250 Gms",
-        price: "₹49.00",
-        location: "From DenkaniKottai",
-        image: veg2,
+        price: "₹27.00",
+        location: "From Nilgiris",
+        image: veg4,
+      },
+     
+       {
+        name: "Yellow Pumpkin",
+        weight: "500 Gms",
+        price: "₹89.00",
+        location: "From Vandavasi, Tamilnadu",
+        image: veg5,
       },
       {
-        name: "Bottle Gourd",
+        name: "Cabbage",
         weight: "600 Gms",
         price: "₹65.00",
-        location: "From Vandavasi",
-        image: veg1,
-      }
+        location: "From Denkanikottai, Tamilnadu",
+        image: veg6,
+      },
+       {
+        name: "Long Beans / Yard Beans",
+        weight: "250 Gms",
+        price: "₹59.00",
+        location: "From Vandavasi, Tamilnadu",
+        image: veg7,
+      },
+{
+        name: "LYam",
+        weight: "500 Gms",
+        price: "₹65.00",
+        location: "From Harur",
+        image: veg8,
+      },
+
     ],
 
-    "Leafy and Seasonal": [
+    "Leafy and Seasonings": [
       {
         name: "Mint Leaves",
         weight: "100 Gms",
@@ -107,6 +157,27 @@ export default function ProductPage() {
         price: "₹12.00",
         location: "From Nilgiris",
         image: leafy2,
+      },
+      {
+        name: "Coriander Leaves",
+        weight: "100 Gms",
+        price: "₹18.00",
+        location: "From DenkaniKottai",
+        image: leafy5,
+      },
+      {
+        name: "Dhantu Green",
+        weight: "250 Gms",
+        price: "₹40.00",
+        location: "From DenkaniKottai",
+        image: leafy4,
+      },
+       {
+        name: "Agathi Leaves",
+        weight: "250 Gms",
+        price: "₹35.00",
+        location: "From Denkanikottai, Tamilnadu",
+        image: leafy3,
       }
     ],
 
@@ -138,6 +209,7 @@ export default function ProductPage() {
         location: "From Ooty",
         image: veg2,
       }
+      
     ]
   };
 
@@ -146,6 +218,7 @@ export default function ProductPage() {
   { img: apple, label: "Fresh Fruits" },
   { img: carrot, label: "Fresh Vegetables" },
   { img: leaf, label: "Leafy and Seasonings" },
+  { img :leafy1, label : "Other Vegetables"},
   // { img: tomato, label: "Exotics" },
   // { img: orange, label: "MisFits" },
   { img: dal, label: "Dals & Rice" },
