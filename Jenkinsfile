@@ -3,38 +3,38 @@ pipeline {
 
     stages {
 
-        stage('Clone Repo') {
+        stage('Checkout Code') {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/training-11/formlet.git'
             }
         }
 
-        stage('Build Docker Images') {
+        stage('Deploy to Server') {
             steps {
-                sh 'docker-compose build'
-            }
-        }
+                sh '''
+                # Go to real deployment directory
+                cd /root/formlet
 
-        stage('Stop Old Containers') {
-            steps {
-                sh 'docker-compose down || true'
-            }
-        }
+                # Pull latest code
+                git pull origin main
 
-        stage('Start New Containers') {
-            steps {
-                sh 'docker-compose up -d'
+                # Stop running containers
+                docker-compose down || true
+
+                # Build and start new containers
+                docker-compose up -d --build
+                '''
             }
         }
     }
 
     post {
         success {
-            echo "Formlet Deployment Completed Successfully!"
+            echo "🚀 Formlet Deployment Successful!"
         }
         failure {
-            echo "Deployment Failed!"
+            echo "❌ Deployment Failed!"
         }
     }
 }
