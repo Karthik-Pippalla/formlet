@@ -3,7 +3,7 @@ import "./Navbar.css";
 import SignInModal from "./SignInModal"; 
 import { Link } from "react-router-dom";
 
-import logo from "../../Images/Updated Logo with typo.png";
+import logo from "../../Images/New logo updated.png";
 import searchIcon from '../../Images/Search icon.png';
 import CalendarIcon from "../../Images/Calendar icon.png";
 import accountIcon from "../../Images/Account icon.png";
@@ -365,10 +365,6 @@ const allProducts = {
    
   ],
 
-  // "Other vegetables" : [
-  //     { name: "Mint Leaves", weight: "100 Gms", price: "₹15.00", location: "From Ooty", image: leafy1 },
-  //   { name: "Coriander Leaves", weight: "100 Gms", price: "₹12.00", location: "From Nilgiris", image: leafy2 }
-  // ],
 "What's new" :[
 
 ],
@@ -588,11 +584,7 @@ const allProducts = {
              image: dai9,
            }
   ],
-  // "Dehydrated" : [
-  //      { name: "Mint Leaves", weight: "100 Gms", price: "₹15.00", location: "From Ooty", image: leafy1 },
-  //   { name: "Coriander Leaves", weight: "100 Gms", price: "₹12.00", location: "From Nilgiris", image: leafy2 }
-  
- // ]
+
   
 };
 
@@ -614,7 +606,7 @@ const categoryParentMap = {
   "Natural sweeteners": "Essentials",
   "Ready to cook": "Essentials",
 
-  // Daily & eggs group
+  // Dairy & eggs group
   "Mlik": "Dairy & eggs",
   "Eggs": "Dairy & eggs",
   "Yogurts": "Dairy & eggs",
@@ -625,9 +617,6 @@ const categoryParentMap = {
 
 const navigate = useNavigate();
 
-// const handleDropdownClick = (category) => {
-//   navigate(`/products/${category.replace(/\s+/g, "-").toLowerCase()}`);
-// };
 
 const handleDropdownClick = (category) => {
   setSelectedCategory(category);
