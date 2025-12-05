@@ -188,11 +188,11 @@ button:hover {
   }
 
   .left {
-    left: -250px ;
+    left: 10px ;
   }
 
   .right {
-    right: -290px !important ;
+    right: 10px !important ;
   }
 
   /* VEG BOX IMAGE */
