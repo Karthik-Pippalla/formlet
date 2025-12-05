@@ -102,8 +102,63 @@
   .testimonial-text {
     font-size: 18px;
   }
-
+/* 
   .testimonial-author {
     font-size: 12px;
+  } */
+}
+/* MOBILE SLIDER */
+.testimonials-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* hide desktop */
+  .testimonials-grid {
+    display: none !important;
+  }
+
+  .testimonials-mobile {
+    display: block ;
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .mobile-card {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .testimonial-text {
+    font-size: 20px !important;
+    line-height: 1.4;
+  }
+
+  .quote-img {
+    width: 70px;
+    margin-bottom: 10px;
+  }
+
+  /* ARROWS FIX – EXACT LIKE RIVERFORD */
+  .arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 38px;
+    background: none;
+    border: none;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+  }
+
+  .left {
+    left: 15px;
+  }
+
+  .right {
+    right: 15px;
   }
 }
