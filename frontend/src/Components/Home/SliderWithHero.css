@@ -144,7 +144,6 @@ button:hover {
 
    .hero-container {
       position: relative;
-    overflow: hidden;
     padding: 40px 0;
     text-align: center;
     background-color: #01BF64;
@@ -238,10 +237,11 @@ button:hover {
 
   .hero-container {
       position: relative;
-    overflow: hidden;
+      overflow-x: hidden;
     padding: 40px 0;
     text-align: center;
     background-color: #01BF64;
+
   }
 
   /* SLIDE AREA */
@@ -284,11 +284,11 @@ button:hover {
   }
 
   .left {
-    left: 30px ;
+    left:20px ;
   }
 
   .right {
-    right: 30px !important ;
+    right: 40px !important ;
   }
 
   /* VEG BOX IMAGE */
@@ -320,4 +320,5 @@ button:hover {
     font-size: 16px;
     border-radius: 8px;
   }
+
 }
