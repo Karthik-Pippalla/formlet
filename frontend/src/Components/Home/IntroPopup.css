@@ -1,20 +1,3 @@
-/* .intro-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-    background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  backdrop-filter: brightness(0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-} */
-
-
 .intro-overlay {
   position: fixed !important;
   top: 0;
@@ -25,38 +8,37 @@
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-
   /* FULLY cover whatever is behind */
   background-color: rgba(0, 0, 0, 0.80) !important;
-
   /* Force popup above EVERYTHING */
   z-index: 999999999 !important;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Add blend mode to darken the background */
+  background-blend-mode: darken;
 }
 
-/* 
-.intro-overlay ~ * {
-  pointer-events: none;
-} */
-
 .intro-content {
-  max-width: 800px;
+  max-width: 650px;
   width: 90%;
-  /* background: rgba(0, 0, 0, 0.45); */
+  /* Semi-transparent background for better readability */
+  background: rgba(0, 0, 0, 0.65);
   padding: 40px 30px;
   border-radius: 15px;
   text-align: left;
   color: white;
-  /* backdrop-filter: blur(4px); */
+  backdrop-filter: blur(8px);
+  /* Position it slightly to the right to align with the field area */
+  margin-left: 15%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .intro-content h1 {
   font-size: 42px;
   font-weight: bold;
   margin-bottom: 15px;
+  margin-top: 0;
 }
 
 .intro-subtext {
@@ -73,8 +55,9 @@
 }
 
 .intro-points li {
-  margin: 8px 0;
+  margin: 12px 0;
   font-size: 18px;
+  padding-left: 5px;
 }
 
 .gotit-btn {
@@ -91,20 +74,39 @@
 
 .gotit-btn:hover {
   background: #3d8b41;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
 }
 
 /* 📱 Mobile Responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .intro-content {
-    padding: 25px;
+    padding: 30px 25px;
+    margin-left: 0;
+    max-width: 90%;
   }
-
   .intro-content h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
-
   .intro-subtext,
   .intro-points li {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-content {
+    padding: 25px 20px;
+  }
+  .intro-content h1 {
+    font-size: 28px;
+  }
+  .intro-subtext,
+  .intro-points li {
+    font-size: 15px;
+  }
+  .gotit-btn {
+    width: 100%;
+    padding: 14px 28px;
   }
 }

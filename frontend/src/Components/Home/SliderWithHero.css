@@ -234,6 +234,10 @@ button:hover {
 
 /* PERFECT Mobile Layout – Riverford style */
 @media (max-width: 480px) {
+   html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
 
   .hero-container {
       position: relative;
