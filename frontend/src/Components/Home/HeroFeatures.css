@@ -39,6 +39,119 @@
     padding: 60px 0;
      flex-wrap: nowrap;
   }
+ 
+/*
+ * ========================================
+ * TABLET RESPONSE CODE (RIVERFORD STYLE)
+ * Breakpoint: 768px to 1024px (Standard Tablet Range)
+ * ========================================
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* --- 1. CORE LAYOUT AND WIDTH --- */
+
+    /* Ensure main content containers are centered and wide */
+    .container {
+        /* Set a max width to prevent stretching and add generous side padding */
+        max-width: 960px; /* A good maximum width for tablet landscape */
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: 0 auto;
+    }
+
+    /* Make sections feel spacious */
+    section {
+        padding: 60px 0;
+    }
+
+    /* --- 2. TYPOGRAPHY (FONT SIZE) --- */
+
+    body {
+        /* Increase base font size for better readability on tablet */
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        /* Make the main hero heading large and impactful */
+        font-size: 50px;
+    }
+
+    h2 {
+        /* Sub-headings for sections */
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        /* Card titles or smaller section headings */
+        font-size: 22px;
+    }
+
+    /* --- 3. LAYOUT RATIOS (GRID) --- */
+
+    /* Apply to the 'How Farmlet Works' section and customer testimonials (if applicable) */
+    .three-column-grid {
+        display: grid;
+        /* Switch from 1-column mobile to 3-column tablet view */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px; /* Spacing between columns */
+    }
+
+    /* Ensure product or item cards are responsive */
+    .product-grid {
+        display: grid;
+        /* Often 2 or 3 columns for product listings on tablet */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    /* --- 4. HEADER ADJUSTMENTS --- */
+
+    /* Make the navigation items look more spacious */
+    .header-nav ul li a {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    /* Center the main call-to-action button */
+    .hero-section .button {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+
+    /* Adjust image size/ratio within the hero section for tablet */
+    .hero-image {
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+
+
+/* 🖥️ BIG DESKTOP / MONITOR – 1200px and above */
+@media (min-width: 1200px) {
+  .hero-features {
+    margin-top: -40px;
+    background: #f4f1ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 350px;         /* a little more space on big screens */
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .feature-box img {
+    width: 110px;
+  }
+
+  .feature-box p {
+    font-size: 30px;
+  }
+}
+
 
   /* reorder items: organic first */
   .hero-features .feature-box:nth-child(2) {
