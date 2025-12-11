@@ -100,7 +100,7 @@
 .hero-image {
   width: 100%;
   max-width: 100%;
-  margin-top: -200px;
+  margin-top: -100px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
@@ -139,6 +139,7 @@
   .hero-button {
     font-size: 18px;
     padding: 16px 40px;
+
   }
   
   .hero-right {
@@ -200,6 +201,18 @@
   .hero-button {
     font-size: 16px;
     padding: 14px 30px;
+  }
+  
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-button {
+    display: none !important;
+  }
+  .hero-image {
+    /* margin-top: -30px !important; */
+     width: 110%;
+    max-width: 420px;
+    margin-top: 0 !important;
   }
   
 }

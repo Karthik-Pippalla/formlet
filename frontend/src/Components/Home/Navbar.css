@@ -430,3 +430,125 @@ margin-left: 90px;
 }
 
 }
+/* ============================================================
+   📱 TABLET LAYOUT — Exactly like Riverford (769px - 1024px)
+   ============================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* ROW 1 — Logo + Search + Icons */
+  .main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: auto;
+    background: #F8F3EA !important;
+    border-bottom: none !important;
+  }
+
+  /* Logo */
+  .nav-left {
+    margin-left: 0 !important;
+  }
+
+  .nav-logo {
+    height: 80px !important;
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  /* Search bar visible on tablet */
+  .search-box {
+    display: flex !important;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 20px !important;
+  }
+
+  /* Right icons (calendar + account) */
+  .nav-right {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 0 !important;
+    align-items: center;
+  }
+
+  .mobile-search-icon {
+    display: none !important;
+  }
+
+  .right-item span {
+    display: none !important;  /* hide "your delivery schedule" text like Riverford */
+  }
+
+  .nav-right img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+   .nav-center {
+    display: none !important;
+  }
+  .nav-center li {
+    font-size: 18px;
+    padding: 6px 14px;
+    font-weight: 600;
+  }
+
+  /* Submenus hidden on tablet */
+  .submenu,
+  .submenu-container {
+    display: none !important;
+  }
+
+   .mobile-submenu {
+    display: flex !important;
+    justify-content: center;
+    gap: 290px;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .mobile-submenu-item {
+    font-size: 18px;
+    padding: 8px 15px;
+    font-weight: 500;
+  }
+
+  .mobile-submenu-item.active {
+    border-bottom: 3px solid #01BF64;
+    background: #dbf1e7;
+  }
+
+  .tablet-dropdown {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background: white;
+    padding: 20px 0;
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
+  }
+
+  .tablet-dropdown-item {
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .tablet-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .tablet-desc {
+    font-size: 13px;
+    color: #444;
+  }
+}

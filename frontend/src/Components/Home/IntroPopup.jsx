@@ -25,8 +25,13 @@ export default function IntroPopup() {
 
   
   return (
-    <div className="intro-overlay" style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className="intro-content">
+    <div className="intro-overlay" style={{ backgroundImage: `url(${bgImage})` }}    onClick={handleClose}>
+      <div className="intro-content" onClick={(e) => e.stopPropagation()} >
+
+ <button className="close-btn" onClick={handleClose}>
+          ✕
+        </button>
+
         <h1>Welcome to Farmlet 🌿</h1>
 
         <p className="intro-subtext">
