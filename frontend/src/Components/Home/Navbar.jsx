@@ -731,13 +731,7 @@ useEffect(() => {
 
 
         <ul className="nav-center">
-         {/* <li
-  className={`menu-item ${activeTab === "Shop" ? "active" : ""}`}
-  onMouseEnter={() => handleHover("Shop")}
-  onClick={() => navigate("/products/fresh-fruits")}
->
-            Shop
-          </li> */}
+ 
           <li
   className={`menu-item ${activeTab === "Shop" ? "active" : ""}`}
   onMouseEnter={() => {
@@ -764,7 +758,7 @@ useEffect(() => {
           >
             About Farmlet 
           </li>
-      </ul> */}
+      </ul> 
 {/* ---------- CENTER NAV (Logo left, search centered, nav center) ---------- */}
 <ul className="nav-center" ref={navCenterRef}>
   <li
@@ -876,7 +870,7 @@ useEffect(() => {
     </span>
     {/* <BsCalendarEvent size={25}/> */}
     <img src={CalendarIcon} alt="Calendar" style={{ width: 30, height: 30 }} />
-
+ </div>
 
 
 <div
@@ -888,7 +882,7 @@ useEffect(() => {
     Sign in or<br /><span >create account</span>
   </span>
   <img src={accountIcon} alt="Account" style={{ width: 30, height: 30 }} />
-</div>
+
 </div>
 
 </div>

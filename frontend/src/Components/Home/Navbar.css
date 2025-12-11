@@ -936,10 +936,10 @@ margin-left: 10px;
   }
 
   /* Submenus hidden on tablet */
-  .submenu,
+  /* .submenu,
   .submenu-container {
     display: none !important;
-  }
+  } */
 
    .mobile-submenu {
     display: flex !important;
