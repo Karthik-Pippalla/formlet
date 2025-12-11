@@ -869,188 +869,125 @@ margin-left: 10px;
 }
 
 }
-/* -------------------------
-   TABLET: 768px – 1024px
-   Header / Navbar adjustments
-   ------------------------- */
-/* ---------- submenu: desktop hover + tablet click behavior ---------- */
-/* -------------------------
-   TABLET: 768px – 1024px
-   Header / Navbar adjustments
-   ------------------------- */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* ============================================================
+   📱 TABLET LAYOUT — Exactly like Riverford (769px - 1024px)
+   ============================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
 
-  /* main navbar - 3-column layout */
+  /* ROW 1 — Logo + Search + Icons */
   .main-navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    gap: 24px;
-    position: relative;      /* for centered search */
-    background: #faf6f0;     /* light header like Riverford */
-    z-index: 50;
+    height: auto;
+    background: #F8F3EA !important;
+    border-bottom: none !important;
   }
 
-  /* left: logo */
+  /* Logo */
   .nav-left {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: left;
+    margin-left: 0 !important;
   }
 
   .nav-logo {
-    height: 42px;            /* tablet logo size */
-    width: auto;
-    object-fit: contain;
-    margin-left: 4px;
+    height: 80px !important;
+    width: auto !important;
+    margin: 0 !important;
   }
 
-  /* center: only show primary top-level items and center them */
-  .nav-center {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
-    gap: 36px;
-    align-items: center;
-    margin: 0 20px;
-  }
-
-  /* show only the first two items (Shop & About) on tablet */
-  .nav-center li {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 600;
-    color: #222;
-    cursor: pointer;
-    padding: 6px 8px;
-    white-space: nowrap;
-  }
-
-  /* hide any extra nav items beyond the first two */
-  .nav-center li:not(:nth-child(1)):not(:nth-child(2)) {
-    display: none;
-  }
-
-  /* SEARCH: centered, prominent, tablet width */
+  /* Search bar visible on tablet */
   .search-box {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;                /* Riverford-like width on tablet */
-    max-width: calc(100% - 160px);
-    background: #ffffff;
-    border-radius: 6px;
-    padding: 6px 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    display: flex;
+    display: flex !important;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 20px !important;
+  }
+
+  /* Right icons (calendar + account) */
+  .nav-right {
+    display: flex !important;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 0 !important;
     align-items: center;
-    gap: 8px;
-    border: 1px solid #e6dac6;
   }
 
-  .search-box input {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    padding: 6px 2px;
-    background: transparent;
-  }
-
-  .search-box img {
-    width: 24px;
-    height: 24px;
-    opacity: 0.9;
-  }
-
-  /* hide the small mobile-only search icon (we have full search box) */
   .mobile-search-icon {
     display: none !important;
   }
 
-  /* right: icons / account */
-  .nav-right {
-    flex: 0 0 auto;
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    justify-content: flex-end;
+  .right-item span {
+    display: none !important;  /* hide "your delivery schedule" text like Riverford */
   }
 
   .nav-right img {
-    width: 28px;
-    height: 28px;
-    display: block;
+    width: 28px !important;
+    height: 28px !important;
   }
 
-  .right-item span {
-    display: inline-block;
-    font-size: 12px;
-    text-align: right;
+   .nav-center {
+    display: none !important;
+  }
+  .nav-center li {
+    font-size: 18px;
+    padding: 6px 14px;
+    font-weight: 600;
   }
 
-  /* Mobile submenu row (the secondary row under navbar)
-     Show only Shop and About as visual tabs */
-  .mobile-submenu {
+  /* Submenus hidden on tablet */
+  .submenu,
+  .submenu-container {
+    display: none !important;
+  }
+
+   .mobile-submenu {
     display: flex !important;
     justify-content: center;
-    gap: 48px;
-    width: 100%;
-    background: #ffffff;
-    height: 48px;
-    border-bottom: 1px solid #eee;
-    align-items: center;
-    margin-top: 8px;
+    gap: 290px;
+    background: white;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
   }
 
   .mobile-submenu-item {
-    font-size: 15px;
-    font-weight: 600;
-    padding: 12px 6px;
-    background: transparent;
-    color: #222;
+    font-size: 18px;
+    padding: 8px 15px;
+    font-weight: 500;
   }
 
-  .mobile-submenu-item:not(:nth-child(1)):not(:nth-child(2)) {
-    display: none;     /* ensure only Shop + About appear */
+  .mobile-submenu-item.active {
+    border-bottom: 3px solid #01BF64;
+    background: #dbf1e7;
   }
 
-  /* Dropdown panels used from submenu (desktop-like behavior)
-     Keep them full width under the navbar on tablet */
-  .mobile-dropdown,
-  .mobile-full-dropdown,
-  .dropdown-menu {
-    width: 100% !important;
-    left: 0 !important;
-    transform: none !important;
-    position: static !important;
-    background: #faf6f0;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 10px 0;
-    border: none;
+  .tablet-dropdown {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background: white;
+    padding: 20px 0;
+    border-radius: 6px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+    z-index: 9999;
   }
 
-  .mobile-dropdown-item,
-  .dropdown-item {
-    padding: 12px 16px;
-    text-align: left;
-    font-size: 15px;
-    border-bottom: 1px solid #eee;
+  .tablet-dropdown-item {
+    text-align: center;
+    padding: 12px 0;
   }
 
-  /* smaller view adjustments for narrow tablets (portrait) */
-  @media (min-width: 768px) and (max-width: 840px) {
-    .search-box { width: 420px; max-width: calc(100% - 120px); }
-    .nav-center { gap: 28px; }
-    .mobile-submenu { gap: 32px; }
+  .tablet-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .tablet-desc {
+    font-size: 13px;
+    color: #444;
   }
 }
-
-
-
-
-
-
-

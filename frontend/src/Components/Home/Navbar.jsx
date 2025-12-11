@@ -16,7 +16,7 @@ import fruit1 from "../../Images/fruit1.png";
 import fruit2 from "../../Images/fruit2.jpg";
 import fruit3 from "../../Images/fruit3.jpg";
 import fruit4 from "../../Images/fruit4.jpg";
-import fruit5 from "../../Images/fruit5.png";
+// import fruit5 from "../../Images/fruit5.png";
 import fruit6 from "../../Images/fruit6.jpg";
 import veg1 from "../../Images/veg1.png";
 import veg2 from "../../Images/veg2.png";
@@ -81,7 +81,7 @@ export default function Navbar() {
 
 const [openPopup, setOpenPopup] = useState(false);
 const [selectedCategory, setSelectedCategory] = useState("Fresh Fruits");
-
+const [tabletDropdownOpen, setTabletDropdownOpen] = useState(false);
   const submenuRef = useRef({});
 
 
@@ -716,6 +716,7 @@ useEffect(() => {
   };
 }, []);
 
+
   return (
     <>
       {/* Top Navbar */}
@@ -729,14 +730,34 @@ useEffect(() => {
 </div>
 
 
-        {/* <ul className="nav-center">
-         <li
+        <ul className="nav-center">
+         {/* <li
   className={`menu-item ${activeTab === "Shop" ? "active" : ""}`}
   onMouseEnter={() => handleHover("Shop")}
   onClick={() => navigate("/products/fresh-fruits")}
 >
             Shop
-          </li>
+          </li> */}
+          <li
+  className={`menu-item ${activeTab === "Shop" ? "active" : ""}`}
+  onMouseEnter={() => {
+    if (window.innerWidth > 1024) {
+      handleHover("Shop");   // Desktop hover menu
+    }
+  }}
+  onClick={() => {
+    if (window.innerWidth >= 769 && window.innerWidth <= 1024) {
+      // 📱 Tablet: Toggle dropdown instead of navigating
+      setTabletDropdownOpen(prev => !prev);
+    } else {
+      // 💻 Desktop + Mobile: Normal navigation
+      navigate("/products/fresh-fruits");
+    }
+  }}
+>
+  Shop
+</li>
+
           <li
             className={activeTab === "About" ? "active" : ""}
             onMouseEnter={() => handleHover("About")}
@@ -845,6 +866,7 @@ useEffect(() => {
   <img src={searchIcon} alt="Search" style={{ width: 23, height: 23 }} />
 
 </div>
+
   <div
     className={`right-item ${activeTab === "Delivery" ? "active" : ""}`}
     onMouseEnter={() => handleHover("Delivery")}
@@ -854,7 +876,8 @@ useEffect(() => {
     </span>
     {/* <BsCalendarEvent size={25}/> */}
     <img src={CalendarIcon} alt="Calendar" style={{ width: 30, height: 30 }} />
-  </div>
+
+
 
 <div
   className={`right-item ${activeTab === "Account" ? "active" : ""}`}
@@ -866,10 +889,22 @@ useEffect(() => {
   </span>
   <img src={accountIcon} alt="Account" style={{ width: 30, height: 30 }} />
 </div>
+</div>
 
 </div>
      
+
       </nav>
+      {tabletDropdownOpen && window.innerWidth >= 769 && window.innerWidth <= 1024 && (
+  <div className="tablet-dropdown">
+    {mobileDropdownContent["Shop"]?.map((item, i) => (
+      <div key={i} className="tablet-dropdown-item">
+        <div className="tablet-title">{item.title}</div>
+        <div className="tablet-desc">{item.desc}</div>
+      </div>
+    ))}
+  </div>
+)}
   {/* MOBILE SUBMENU */}
 <div className="mobile-submenu">
   <div

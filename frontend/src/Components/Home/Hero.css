@@ -100,7 +100,7 @@
 .hero-image {
   width: 100%;
   max-width: 100%;
-  margin-top: -200px;
+  margin-top: -100px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
@@ -202,6 +202,7 @@
   .hero-button {
     font-size: 18px;
     padding: 16px 40px;
+
   }
   
   .hero-right {

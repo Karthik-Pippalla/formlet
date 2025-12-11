@@ -8,30 +8,27 @@
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
-  /* FULLY cover whatever is behind */
-  background-color: rgba(0, 0, 0, 0.80) !important;
-  /* Force popup above EVERYTHING */
+
+  background-color: rgba(0, 0, 0, 0.70) !important;
+
   z-index: 999999999 !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Add blend mode to darken the background */
-  background-blend-mode: darken;
+  /* background-blend-mode: darken; */
 }
 
 .intro-content {
   max-width: 650px;
   width: 90%;
-  /* Semi-transparent background for better readability */
-  background: rgba(0, 0, 0, 0.65);
+  /* background: rgba(0, 0, 0, 0.65); */
   padding: 40px 30px;
   border-radius: 15px;
-  text-align: left;
+  text-align: center;
   color: white;
-  backdrop-filter: blur(8px);
-  /* Position it slightly to the right to align with the field area */
-  margin-left: 15%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  /* backdrop-filter: blur(8px); */
+  /* margin-left: 15%; */
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); */
 }
 
 .intro-content h1 {
@@ -77,6 +74,24 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
 }
+
+/* ❌ Close Button */
+.close-btn {
+  position: absolute;
+  top: -20px;
+  right: -120px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  opacity: 0.7;
+}
+
 
 /* 📱 Mobile Responsive */
 @media (max-width: 768px) {
