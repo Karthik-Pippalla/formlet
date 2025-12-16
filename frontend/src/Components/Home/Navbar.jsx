@@ -71,13 +71,13 @@ import rc3 from "../../Images/rc3.jpeg";
 import rc4 from "../../Images/rc4.jpeg";
 import deh1 from "../../Images/deh1.jpg";
 
-export default function Navbar() {
+export default function Navbar({ mobileSearchOpen, setMobileSearchOpen, signInOpen, setSignInOpen }) {
   const [activeTab, setActiveTab] = useState("Shop");
- const [openModal, setOpenModal] = useState(false);
+  // openModal controlled by parent for coordination with CTA
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [dropdownPos, setDropdownPos] = useState({ left: 0 });
   // const [searchOpen, setSearchOpen] = useState(false);
-  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+  // mobileSearchOpen state is now controlled by parent (MainHome)
 
 const [openPopup, setOpenPopup] = useState(false);
 const [selectedCategory, setSelectedCategory] = useState("Fresh Fruits");
@@ -754,7 +754,7 @@ const categories = Object.keys(allProducts);
 <div
   className={`right-item ${activeTab === "Account" ? "active" : ""}`}
   onMouseEnter={() => handleHover("Account")}
-  onClick={() => setOpenModal(true)}   // <<--- add this
+  onClick={() => setSignInOpen(true)}
 >
   <span className="underline-link">
     Sign in or<br /><span >create account</span>
@@ -902,7 +902,7 @@ onClick={() => openProductPopup(categoryParentMap[d] || d)}
       <div className="search-title">Search Farmlet</div>
 
       <button
-        className="close-btn"
+        className="mobile-close-btn"
         onClick={() => setMobileSearchOpen(false)}
       >
         ✕
@@ -954,7 +954,7 @@ onClick={() => openProductPopup(categoryParentMap[d] || d)}
 
 
 
-            <SignInModal open={openModal} onClose={() => setOpenModal(false)} />
+            <SignInModal open={signInOpen} onClose={() => setSignInOpen(false)} />
     </>
   );
 }
