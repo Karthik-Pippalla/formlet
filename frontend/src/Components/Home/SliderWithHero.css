@@ -8,7 +8,8 @@
   background-color: #01BF64;
   text-align: center;
   color: white;
-  font-family: 'caveat', cursive;
+  font-family: 'Caveat', cursive;
+  font-style: italic;
   padding-bottom: 30px;
   overflow-x: hidden;
 }

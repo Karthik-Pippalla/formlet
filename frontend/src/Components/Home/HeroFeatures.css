@@ -17,7 +17,8 @@
 }
 
 .feature-box p {
-  font-family: "caveat", cursive;
+  font-family: "Caveat", cursive;
+  font-style: italic;
   font-size: 28px;
   font-weight: 700;
   margin: 0;
@@ -208,6 +209,7 @@
   /* heading font: Caveat to keep same handwritten look */
   .hero-features .feature-box p {
     font-family: "Caveat", cursive;
+    font-style: italic;
     font-size: 26px;         /* large but readable on tablet */
     font-weight: 700;
     line-height: 1.05;

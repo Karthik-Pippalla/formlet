@@ -3,7 +3,8 @@
   padding: 110px 0;
   
   text-align: center;
-  font-family: 'caveat', cursive;
+  font-family: 'Caveat', cursive;
+  font-style: italic;
 }
 
 .steps-container {

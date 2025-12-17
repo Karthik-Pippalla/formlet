@@ -85,12 +85,14 @@ export default function Navbar({ mobileSearchOpen, setMobileSearchOpen, signInOp
   const [selectedCategory, setSelectedCategory] = useState("Fresh Fruits");
 
   const submenuRef = useRef({});
+  const { currentUser } = useAuth();
 
   const handleAccountClick = () => {
     if (currentUser) {
-      setOpenOrderModal(true);
+      // Navigate to orders or account page
+      navigate("/account");
     } else {
-      setOpenModal(true);
+      setSignInOpen(true);
     }
   };
 
@@ -831,30 +833,6 @@ export default function Navbar({ mobileSearchOpen, setMobileSearchOpen, signInOp
           </div>
         </div>
       )}
-
-
-      {/* 📱 Mobile Search Popup */}
-      {mobileSearchOpen && window.innerWidth <= 768 && (
-        <div className="mobile-search-overlay">
-
-      >
-        {d}</div>
-    ))}
-  </div>
-)}</div>
-
-{activeSubmenu && window.innerWidth <= 768 && (
-  <div className="mobile-dropdown-overlay">
-    <div className="mobile-full-dropdown">
-      {mobileDropdownContent[activeSubmenu]?.map((item, i) => (
-        <div key={i} className="mobile-dropdown-item">
-          <div className="mob-title">{item.title}</div>
-          <div className="mob-desc">{item.desc}</div>
-        </div>
-      ))}
-    </div>
-  </div>
-)}
 
 
 {/* 📱 Mobile Search Popup */}

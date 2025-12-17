@@ -110,7 +110,8 @@
 
 /* Title */
 .modal-title {
-  font-family: "caveat", cursive;
+  font-family: "Caveat", cursive;
+  font-style: italic;
   font-size: 52px;
   font-weight: 600;
   margin-bottom: 10px;
@@ -577,7 +578,8 @@
 }
 
 .build-order-title {
-  font-family: "caveat", cursive;
+  font-family: "Caveat", cursive;
+  font-style: italic;
   font-size: 42px;
   font-weight: 500;
   margin-bottom: 5px;

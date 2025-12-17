@@ -46,7 +46,8 @@
 
 .grown-title {
     margin-top: 120px;
-  font-family:"caveat", cursive;
+  font-family:"Caveat", cursive;
+  font-style: italic;
   font-size: 60px;
   color: #3a2a19;
   margin-bottom: 60px;
@@ -129,6 +130,7 @@
   .grown-title {
     font-size: 32px;
     font-family: "Caveat", cursive;
+    font-style: italic;
     color: #3a2a19;
     margin-bottom: 25px;
   }
